@@ -1,0 +1,238 @@
+/* Utilities */
+.theBody {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: purple;
+}
+
+/* Pre_starting Page - I should change this*/
+.loading {
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+    border: 5px solid orange;
+}
+
+.loading .bar {
+    width: 0%;
+    height: 100%;
+    background-color: rgb(30, 166, 190);
+    border-radius: 20px;
+    text-align: right;
+    animation: loadingbar 3s ease-out forwards;
+}
+
+.loading + p {
+    font-size: 30px;
+}
+
+/* Keyframes */
+@keyframes loadingbar {
+    from {width: 0;}
+    to {width: 100%}
+}
+
+/* Start Page */
+.menu {
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.menu a {
+    width: 50%;
+    height: 50px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    background-color: lightseagreen;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 20px;
+    border: 3px solid aliceblue;
+}
+
+.menu a:hover {
+    background-color: rgb(6, 151, 199);
+}
+
+/* Media Queries */
+@media screen and (max-width: 500px) {
+    .menu {width: 300px; height: 300px;}
+}
+
+/* Level Page */
+#levestats {
+    font-size: 30px;
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/src/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2%;
+    position: relative;
+}
+
+.options a , .options button{
+    color: rgba(255, 255, 255, 0.555);
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-weight: light;
+    cursor: pointer;
+}
+
+.options a:hover , .options button:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#levelstats {
+    font-size: 25px;
+    color: white;
+}
+
+#image {
+    width: 80%;
+    height: 30%;
+    max-width: 800px;
+    background: url("../../assets/src/Flag_of_India.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#answer {
+    width: 80%;
+    max-width: 800px;
+    height: 50px;
+    border: none;
+    background-color: #ffffff80;
+    padding: 0;
+    text-align: center;
+    font-size: 23px;
+    color: black;
+}
+
+#keyboard {
+    width: 80%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+}
+
+#keyboard button {
+    background-color: black;
+    border: none;
+    padding: 5px;
+    border-bottom: 2px solid rgb(49, 49, 49);
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Score Log */
+#score_log {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/src/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#score_log {
+    text-align: center;
+    font-size: 25px;
+    color: orange;
+}
+
+.box {
+    width: 80%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid lightseagreen;
+}
+
+.box img {
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+#retry , #nextlevel {
+    width: 80px;
+    height: 30px;
+    background-color: lightseagreen;
+    border: none;
+    border-bottom: 2px solid rgb(98, 98, 241);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 59px;
+}
+
+#how_to {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(236, 187, 27);
+    border-radius: 15px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#how_to button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#how_to button:hover {
+    color: rgb(0, 217, 255);
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    #image {height: 20%;}
+}
+
+@media screen and (max-width: 400px) {
+    #image {height: 15%;}
+    #keyboard {gap: 2.4px;}
+}
