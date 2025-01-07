@@ -551,6 +551,9 @@ function Logic () {
                 game.style.display = 'flex';
                 scorelog.style.display = 'none';
                 break;
+            case '50' :
+                window.open('../../components/pages/final.html','_self');
+                break;
         }
 
         // if (level == '2') {alert('hi')}
@@ -563,7 +566,7 @@ function Logic () {
                 scorelog.style.display = 'flex';
                 answerscreen.value = '';
             }
-        },1000);
+        },500);
 
     return {
         nextlevel : nextlevel
