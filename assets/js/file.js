@@ -8,6 +8,7 @@ function Logic () {
     let levelstats = document.getElementById('levelstats');
     let image = document.getElementById('image');
     let answerscreen = document.getElementById('answer');
+    audioone = document.getElementById('audio_one');
 
     // next level
     function nextlevel () {
@@ -565,6 +566,7 @@ function Logic () {
                 game.style.display = 'none'
                 scorelog.style.display = 'flex';
                 answerscreen.value = '';
+                audioone.play();
             }
         },500);
 
@@ -598,20 +600,44 @@ function keyboard(letter) {
     let display = document.getElementById('answer');
     if (display.value.length <= 15) {
         switch (letter) {
-        case 'a' :
-            display.value += 'A';
+        case 'q' :
+            display.value += 'Q';
             break;
-        case 'b' :
-            display.value += 'B';
-            break;
-        case 'c' :
-            display.value += 'C';
-            break;
-        case 'd' :
-            display.value += 'D';
+        case 'w' :
+            display.value += 'W';
             break;
         case 'e' :
             display.value += 'E';
+            break;
+        case 'r' :
+            display.value += 'R';
+            break;
+        case 't' :
+            display.value += 'T';
+            break;
+        case 'y' :
+            display.value += 'Y';
+            break;
+        case 'u' :
+            display.value += 'U';
+            break;
+        case 'i' :
+            display.value += 'I';
+            break;
+        case 'o' :
+            display.value += 'O';
+            break;
+        case 'p' :
+            display.value += 'P';
+            break;
+        case 'a' :
+            display.value += 'A';
+            break;
+        case 's' :
+            display.value += 'S';
+            break;
+        case 'd' :
+            display.value += 'D';
             break;
         case 'f' :
             display.value += 'F';
@@ -622,9 +648,6 @@ function keyboard(letter) {
         case 'h' :
             display.value += 'H';
             break;
-        case 'i' :
-            display.value += 'I';
-            break;
         case 'j' :
             display.value += 'J';
             break;
@@ -634,50 +657,29 @@ function keyboard(letter) {
         case 'l' :
             display.value += 'L';
             break;
-        case 'm' :
-            display.value += 'M';
-            break;
-        case 'n' :
-            display.value += 'N';
-            break;
-        case 'o' :
-            display.value += 'O';
-            break;
-        case 'p' :
-            display.value += 'P';
-            break;
-        case 'q' :
-            display.value += 'Q';
-            break;
-        case 'r' :
-            display.value += 'R';
-            break;
-        case 's' :
-            display.value += 'S';
-            break;
-        case 't' :
-            display.value += 'T';
-            break;
-        case 'u' :
-            display.value += 'U';
-            break;
-        case 'v' :
-            display.value += 'V';
-            break;
-        case 'w' :
-            display.value += 'W';
+        case 'z' :
+            display.value += 'Z';
             break;
         case 'x' :
             display.value += 'X';
             break;
-        case 'y' :
-            display.value += 'Y';
+        case 'c' :
+            display.value += 'C';
             break;
-        case 'z' :
-            display.value += 'Z';
+        case 'v' :
+            display.value += 'V';
+            break;
+        case 'b' :
+            display.value += 'B';
+            break;
+        case 'n' :
+            display.value += 'N';
+            break;
+        case 'm' :
+            display.value += 'M';
             break;
         case 'clear' :
-            display.value = '';
+            display.value = display.value.slice(0, -1);
             break;
     }
     } else if (letter == 'clear'){display.value = '';}
