@@ -1,6 +1,24 @@
 // Game logic ----------------------- Starts
 let answer = 'INDIA';
 let level = '1';
+let themeaudio = document.getElementById('themeSong');
+let musicButton = document.getElementById('music');
+let musicstats = "mute";
+
+  // theme song
+  function playmusic() {
+    if (musicstats == "mute") {
+        themeaudio.loop = true;
+        themeaudio.play();
+        musicstats = "play";
+        musicButton.innerHTML = '&#128362;';
+    } else if (musicstats == "play") {
+        themeaudio.loop = false;
+        themeaudio.pause();
+        musicstats = "mute";
+        musicButton.innerHTML = '&#128360;';
+    }
+}
 
 function Logic () {
     let game = document.getElementById('game');
@@ -8,7 +26,11 @@ function Logic () {
     let levelstats = document.getElementById('levelstats');
     let image = document.getElementById('image');
     let answerscreen = document.getElementById('answer');
-    audioone = document.getElementById('audio_one');
+    let audioone = document.getElementById('audioOne');
+
+    // setInterval(()=>{
+    //     themeaudio.play();
+    // }, 1000);
 
     // next level
     function nextlevel () {

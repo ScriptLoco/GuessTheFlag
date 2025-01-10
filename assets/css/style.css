@@ -121,6 +121,8 @@
     cursor: pointer;
 }
 
+#music {font-size: 20px;}
+
 .options a:hover , .options button:hover {
     color: white;
     text-decoration: underline;
