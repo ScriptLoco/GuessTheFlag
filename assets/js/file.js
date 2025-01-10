@@ -11,12 +11,15 @@ let musicstats = "mute";
         themeaudio.loop = true;
         themeaudio.play();
         musicstats = "play";
-        musicButton.innerHTML = '&#128362;';
+        // musicButton.innerHTML = '&#128362;';
+        musicButton.classList.remove("fa-volume-xmark");
+        musicButton.classList.add("fa-volume-high");
     } else if (musicstats == "play") {
         themeaudio.loop = false;
         themeaudio.pause();
         musicstats = "mute";
-        musicButton.innerHTML = '&#128360;';
+        musicButton.classList.remove("fa-volume-high");
+        musicButton.classList.add("fa-volume-xmark");
     }
 }
 
@@ -27,10 +30,6 @@ function Logic () {
     let image = document.getElementById('image');
     let answerscreen = document.getElementById('answer');
     let audioone = document.getElementById('audioOne');
-
-    // setInterval(()=>{
-    //     themeaudio.play();
-    // }, 1000);
 
     // next level
     function nextlevel () {
