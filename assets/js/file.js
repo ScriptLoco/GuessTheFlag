@@ -569,5 +569,4 @@ function keyboard(letter) {
             break;
     }
     }
-    } 
-}
+} 
